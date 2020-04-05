@@ -52,7 +52,9 @@ extension UITouch {
         self["locationInWindow"] = windowCoord
         self["previousLocationInWindow"] = windowCoord
         self["phase"] = UITouch.Phase.began.rawValue
-        self["type"] = UITouch.TouchType.direct.rawValue
+        if #available(iOS 9.0, *) {
+            self["type"] = UITouch.TouchType.direct.rawValue
+        }
 //        self["touchFlags._firstTouchForView"] = 1
 //        self["touchFlags._isTap"] = 1
         self["timestamp"] = Date.timeIntervalSinceReferenceDate

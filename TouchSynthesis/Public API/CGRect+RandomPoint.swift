@@ -6,7 +6,7 @@
 //  Copyright © 2019 Mikey Ward. All rights reserved.
 //
 
-import Foundation
+import CoreGraphics
 
 public extension CGRect {
 
